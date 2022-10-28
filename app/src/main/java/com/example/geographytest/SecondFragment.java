@@ -51,7 +51,7 @@ public class SecondFragment extends Fragment {
     }
 
     private CountDownTimer createTimer() {
-        CountDownTimer timer = new CountDownTimer(10000, 1000) {
+        CountDownTimer timer = new CountDownTimer(1200000, 1000) {
             @SuppressLint("SetTextI18n")
             @Override
             public void onTick(long l) {
