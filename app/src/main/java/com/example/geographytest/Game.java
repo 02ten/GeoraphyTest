@@ -77,10 +77,10 @@ public class Game {
         int checkedIdRadioButton = binding.radioGroup.getCheckedRadioButtonId();
         int x = 0;
         switch (checkedIdRadioButton){
-            case R.id.radioButton: x = 0;; break;
-            case R.id.radioButton1: x = 1;; break;
-            case R.id.radioButton2: x = 2;; break;
-            case R.id.radioButton3: x = 3;; break;
+            case R.id.radioButton: x = 0; break;
+            case R.id.radioButton1: x = 1; break;
+            case R.id.radioButton2: x = 2; break;
+            case R.id.radioButton3: x = 3; break;
         }
         binding.radioGroup.clearCheck();
         System.out.println(x+ " " + correctAnswer[previousIndexes.size()-1] + " " + (previousIndexes.size()-1));

@@ -11,8 +11,9 @@
         android:id="@+id/textview_first"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Это тест по географии.\nОн состоит из 20 вопросов."
+        android:text="Промежуточный тест по географии.\nТест состоит из двадцати вопросов.\nНа прохождение теста дается двадцать минут."
         android:textAlignment="center"
+
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toTopOf="@id/nameInsert"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,21 +22,44 @@
 
     <EditText
         android:id="@+id/nameInsert"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:hint="Введите имя"
-        app:layout_constraintTop_toBottomOf="@id/textview_first"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/groupInsert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/button_first"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_first" />
 
+    <EditText
+        android:id="@+id/groupInsert"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:hint="Введите группу"
+        app:layout_constraintBottom_toTopOf="@id/warning"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameInsert" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Введите, пожалуйста, имя и группу!"
+        android:visibility="invisible"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@id/button_first"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/groupInsert" />
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Начать"
-        app:layout_constraintTop_toBottomOf="@id/nameInsert"
+        app:layout_constraintTop_toBottomOf="@id/warning"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

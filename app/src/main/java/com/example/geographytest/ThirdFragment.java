@@ -29,8 +29,10 @@ public class ThirdFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         int score = FirstFragment.user.getScore();
         String name = FirstFragment.user.getName();
-        float percent = (float) score / (float) Game.totalQuestions * 100;
-        binding.result.setText(name + ", вы набрали: " + score + " из " + Game.totalQuestions +
+        String group = FirstFragment.user.getGroup();
+        System.out.println(score);
+        int percent = (int) ((float) score / (float) Game.totalQuestions * 100);
+        binding.result.setText(name +" из группы: "+ group +". Вы набрали: " + score + " из " + Game.totalQuestions +
                 ". Это "+ percent + "%");
         binding.tryAgain.setOnClickListener(new View.OnClickListener() {
             @Override

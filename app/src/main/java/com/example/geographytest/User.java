@@ -2,8 +2,10 @@ package com.example.geographytest;
 
 public class User {
     private String name;
+    private String group;
     private int score = 0;
     private int answeredQuestions = 0;
+
     public String getName() {
         return name;
     }
@@ -26,5 +28,13 @@ public class User {
 
     public void setAnsweredQuestions(int answeredQuestions) {
         this.answeredQuestions = answeredQuestions;
+    }
+
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
     }
 }
